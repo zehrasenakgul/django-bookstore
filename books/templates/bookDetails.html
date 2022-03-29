@@ -1,0 +1,23 @@
+{% include "header.html" %}
+<head>
+  {% block title %}<title>{{book_detail.name}}</title>{% endblock %}    
+</head>
+
+  <!-- Three columns of text below the carousel -->
+  <div class="container pt-5 pb-5">
+    <div class="row">
+      <div class="col-lg-6 text-center justify-content-center single-book-image-block">
+      <img class="single-book-card" width="50%" height="100%" src="{{book_detail.image}}">
+      </div><!-- /.col-lg-4 -->   
+      <div class="col-lg-6 ">
+        <div class="card-body single-book-card">
+            <h5 class="card-title single-book-name">{{book_detail.name}}</h5>
+            <a href="../authordetails/{{book_detail.author_id}}"><h6 class="card-text single-book-author mb-3">{{book_detail.author}}</h6></a>
+            <h5 class="card-title single-book-price mb-5">{{book_detail.price}} TL</h5>
+
+            <a href="#" class="btn btn-dr"> SEPETE EKLE</a>
+            
+          </div> 
+    </div><!-- /.row -->
+  </div><!-- /.row -->
+

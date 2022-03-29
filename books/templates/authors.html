@@ -1,0 +1,29 @@
+{% include "header.html" %}
+<head>
+  {% block title %}<title>Yazar Listesi</title>{% endblock %}    
+</head>
+
+  <div class="container pb-5 pt-5">
+      <div class="row" style="padding:0 !important ">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Yazar</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">Detaya Git</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for author in authors_list %}
+              <tr>
+                <th scope="row">{{author.id}}</th>
+                <td><a href="/books/authordetails/{{author.id}}">{{author.name}}</a></td>
+                <td>{{author.created}}</td>
+                <td><a href="authordetails/{{author.id}}"><button class="btn btn-info">Detaya Git</button></a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+  </div>

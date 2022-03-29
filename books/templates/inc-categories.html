@@ -1,0 +1,10 @@
+{% block categoryList %}
+<div class="nav-scroller py-1 mb-2">
+  <nav class="nav d-flex text-center align-items-center">
+    {% for category in categories_list %}
+    <a class="p-2 link-secondary" href="/books/categorydetails/{{category.id}}">{{category.name}}</a>
+    {% endfor %}
+  </nav>
+</div>
+{% endblock %}
+

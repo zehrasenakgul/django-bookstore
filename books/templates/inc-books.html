@@ -1,0 +1,14 @@
+<div class="row py-1 mb-2" style="margin: 0 !important">
+  {% for book in books_list %}
+  <div class="col-md-2 px-0  ms-1">
+    <a href="bookdetails/{{book.id}}"><div class="card">
+      <img src="{{book.image}}" class="card-img-top book-image" alt="{{book.name}}" />
+      <div class="card-body book-card">
+        <h5 class="card-title book-name">{{book.name}}</h5>
+        <a href="authordetails/{{book.author_id}}"><h6 class="card-text book-author mb-3">{{book.author}}</h6></a>
+        <a href="#" class="btn btn-dr">{{book.price}} TL</a>
+      </div>
+    </div></a>
+  </div>
+  {% endfor %}
+</div>
